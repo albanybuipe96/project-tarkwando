@@ -1,0 +1,20 @@
+<!-- Add Post Modal -->
+<div class="modal" id="post-modal">
+    <div class="modal-content">
+        <h4>Add News Item</h4>
+        <form action="/admin/compose" method="POST">
+            <div class="input-field">
+                <input name="title" type="text" id="title" autocomplete="off">
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field">
+                <textarea name="content" id="content" class="materialize-textarea"></textarea>
+                <label for="content">Body</label>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="modal-action modal-close btn teal white-text">Save News</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<%- include('partials/header.ejs') %> 
+
+    <!-- Section: Posts -->
+    <section class="section section-posts grey lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Site News</span>
+                            <table class="striped">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Content</th>
+                                        <!-- <th>Date Created</th> -->
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for (item of items) { %>
+                                        <tr>
+                                            <td><%= item.title %></td>
+                                            <td><%= item.content %></td>
+                                            <!-- <td><%= item.date %></td> -->
+                                            <td>
+                                                <a href="" class="btn teal">Details</a>
+                                            </td>
+                                            
+                                        </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-action">
+                            <ul class="pagination">
+                                <li class="disabled">
+                                    <a href="#" class="blue-text">
+                                        <i class="material-icons">chevron_left</i>
+                                    </a>
+                                </li>
+                                <li class="active blue lighten-2">
+                                    <a href="#" class="blue-text">1</a>
+                                </li>
+                                <li class="waves-effect">
+                                    <a href="#" class="blue-text">2</a>
+                                </li>
+                                <li class="waves-effect">
+                                    <a href="#" class="blue-text">3</a>
+                                </li>
+                                <li class="waves-effect">
+                                    <a href="#" class="blue-text">
+                                        <i class="material-icons">chevron_right</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed Action Button -->
+    <div class="fixed-action-btn">
+        <a href="#post-modal" class="btn-floating btn-large red modal-trigger">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+
+    <%- include('partials/compose') %>
+
+    <!-- Preloader -->
+    <div class="loader preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+<%- include('partials/footer.ejs') %>

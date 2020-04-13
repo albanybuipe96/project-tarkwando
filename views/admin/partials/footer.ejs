@@ -1,0 +1,49 @@
+<!-- Footer -->
+<footer class="section teal darken-2 white-text center">
+    <p>SkyLitics Panel Copyright &copy; 2020</p>
+</footer>
+
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<!-- <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+<script src="js/ckeditor/ckeditor.js"></script>
+<script>
+    // Hide Sections
+    $('.section').hide()
+
+    setTimeout(() => {
+
+        $(document).ready(() => {
+
+            // show sections
+            $('.section').fadeIn()
+
+            // fade out preloader
+            $('.loader').fadeOut()
+
+            // initalise floating action button
+            $('.fixed-action-btn').floatingActionButton({
+                hoverEnabled: true,
+                direction: 'up'
+            })
+
+            // initialise modal
+            $('.modal').modal()
+
+            // intialise select
+            $('select').formSelect()
+
+            CKEDITOR.replace('body')
+
+        }) // end of (document).ready()
+
+    }, 1000) // end of setTimeout()
+    M.Sidenav.init($('.sidenav'))
+</script>
+</body>
+
+</html>
